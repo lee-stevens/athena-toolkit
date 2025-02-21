@@ -1,36 +1,35 @@
-import { isPlatformBrowser } from '@angular/common';
-import { ChangeDetectorRef, Component, inject, PLATFORM_ID } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
+import { ChangeDetectorRef, inject, Injectable, PLATFORM_ID } from "@angular/core";
+import { isPlatformBrowser } from "@angular/common";
+import { IPrimeChartFactory, IPrimeChart } from "@Models/prime-chart-factory";
 
-@Component({
-  selector: 'athena-c-charts',
-  imports: [
-    ChartModule
-  ],
-  templateUrl: './charts.component.html',
-  styleUrl: './charts.component.scss'
-})
-export class ChartsComponent {
-  basicData: any;
-  basicOptions: any;
-  platformId = inject(PLATFORM_ID);
+@Injectable()
+export class PrimeChartBarService implements IPrimeChartFactory {
+	data: any;
+	options: any;
+	platformId = inject(PLATFORM_ID);
 
-  constructor(
-    private cd: ChangeDetectorRef
-  ) {}
+	constructor(
+		private _cd: ChangeDetectorRef
+	) {}
 
-  ngOnInit() {
-    this.initChart();
-  }
+	createExampleChart(): IPrimeChart {
+		this.initChart();
+		const chart: IPrimeChart = {
+			type: 'bar',
+			data: this.data,
+			options: this.options
+		};
+		return chart;
+	}
 
-  initChart() {
-    if (isPlatformBrowser(this.platformId)) {
+	initChart() {
+		if (isPlatformBrowser(this.platformId)) {
       const documentStyle = getComputedStyle(document.documentElement);
       const textColor = documentStyle.getPropertyValue('--p-text-color');
       const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color');
       const surfaceBorder = documentStyle.getPropertyValue('--p-content-border-color');
 
-      this.basicData = {
+      this.data = {
         labels: ['Q1', 'Q2', 'Q3', 'Q4'],
         datasets: [
             {
@@ -48,7 +47,7 @@ export class ChartsComponent {
         ],
       };
 
-      this.basicOptions = {
+      this.options = {
           plugins: {
               legend: {
                   labels: {
@@ -76,7 +75,7 @@ export class ChartsComponent {
               },
           },
       };
-      this.cd.markForCheck()
+      this._cd.markForCheck()
     }
-  }
+	}
 }

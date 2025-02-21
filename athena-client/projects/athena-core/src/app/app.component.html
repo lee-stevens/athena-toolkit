@@ -1,23 +1,18 @@
 <main class="main">
   <div class="card">
     <div class="dock-window">
-        <p-dock [model]="items" [position]="'bottom'">
-          <ng-template #item let-item>
-            <img
-              [pTooltip]="item.label"
-              tooltipPosition="top"
-              [src]="item.icon"
-              [alt]="item.label"
-              width="100%"
-              (click)="onDockItemClicked(item)"
-            />
-          </ng-template>
-          @for (item of items; track item) {
-
-          }
-        </p-dock>
+			<p-dock [model]="items" [styleClass]="'min-w-40'" [position]="'bottom'">
+				<ng-template #item let-item>
+					<div (click)="onDockItemClicked(item)">
+						<i class="pi" [ngClass]="item.icon"
+							style="font-size: 2rem"
+							(click)="onDockItemClicked(item)"
+						></i>
+					</div>
+				</ng-template>
+			</p-dock>
     </div>
-</div>
+	</div>
 
   <router-outlet />
 </main>

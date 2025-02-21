@@ -1,0 +1,5 @@
+<div class="card">
+	@for (chart of charts; track chart) {
+		<p-chart [type]="chart.type" [data]="chart.data" [options]="chart.options" class="h-[30rem]" />
+	}
+</div>

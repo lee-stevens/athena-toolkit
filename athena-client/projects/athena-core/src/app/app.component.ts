@@ -22,34 +22,34 @@ export class AppComponent {
 
   items: MenuItem[] = [
     {
-        label: 'Dashboard',
-        icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg',
-        path: '/dashboard'
+			label: 'Dashboard',
+			icon: 'pi-home',
+			path: '/dashboard'
     },
     {
-        label: 'Dev Space',
-        icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
-        path: '/dev-space'
+			label: 'Dev Space',
+			icon: 'pi-code',
+			path: '/dev-space'
     }
   ];
   position = 'bottom';
   positionOptions = [
-      {
-          label: 'Bottom',
-          value: 'bottom'
-      },
-      {
-          label: 'Top',
-          value: 'top'
-      },
-      {
-          label: 'Left',
-          value: 'left'
-      },
-      {
-          label: 'Right',
-          value: 'right'
-      }
+		{
+			label: 'Bottom',
+			value: 'bottom'
+		},
+		{
+			label: 'Top',
+			value: 'top'
+		},
+		{
+			label: 'Left',
+			value: 'left'
+		},
+		{
+			label: 'Right',
+			value: 'right'
+		}
   ];
 
   constructor(
