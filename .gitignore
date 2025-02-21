@@ -1,0 +1,5 @@
+*.pem
+*.env
+
+!localhost-cert-example.pem
+!localhost-key-example.pem
