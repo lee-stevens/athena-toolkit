@@ -1,11 +1,10 @@
-// Fix Tailwind, its not importing
+/// Tailwind & PrimeNG
+@use "tailwindcss";
+
 // @tailwind base;
 // @tailwind components;
 // @tailwind utilities;
-@import "../../../node_modules/tailwindcss/index.css";
-@import "../../../node_modules/tailwindcss/utilities.css";
-// @import "../../../node_modules/tailwindcss/components.css";
-@import "primeicons/primeicons.css";
+// @import "primeicons/primeicons.css";
 
 host {
   --bright-blue: oklch(51.01% 0.274 263.83);
