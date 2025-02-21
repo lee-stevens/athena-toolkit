@@ -55,12 +55,24 @@
                   "maximumError": "8kB"
                 }
               ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/athena-core/environments/environment.ts",
+                  "with": "projects/athena-core/environments/environment.prod.ts"
+                }
+              ],
               "outputHashing": "all"
             },
             "dev": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/athena-core/environments/environment.ts",
+                  "with": "projects/athena-core/environments/environment.dev.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "prod"

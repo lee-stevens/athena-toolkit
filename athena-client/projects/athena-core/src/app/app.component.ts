@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+import { RouterService } from '@Services/root/router.service';
 import { MenuItem } from 'primeng/api';
 import { DockModule } from 'primeng/dock';
 import { TooltipModule } from 'primeng/tooltip';
-import { RouterService } from './@core/@services/root/router.service';
 
 @Component({
   selector: 'athena-c-root',

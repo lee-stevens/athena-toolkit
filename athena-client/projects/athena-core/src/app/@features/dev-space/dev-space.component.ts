@@ -4,6 +4,7 @@ import { PrimengComponent } from './primeng/primeng.component';
 import { MiscComponent } from './misc/misc.component';
 import { ChartsComponent } from './charts/charts.component';
 import { TabsModule } from 'primeng/tabs';
+import { DevDashboardComponent } from "./dev-dashboard/dev-dashboard.component";
 
 @Component({
   selector: 'athena-c-dev-space',
@@ -12,8 +13,9 @@ import { TabsModule } from 'primeng/tabs';
     PrimengComponent,
     MiscComponent,
     ChartsComponent,
-    TabsModule
-  ],
+    TabsModule,
+    DevDashboardComponent
+],
   templateUrl: './dev-space.component.html',
   styleUrl: './dev-space.component.scss'
 })

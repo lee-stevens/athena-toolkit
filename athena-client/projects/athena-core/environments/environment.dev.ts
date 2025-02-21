@@ -1,5 +1,5 @@
 export const ENVIRONMENT = {
   production: false,
-  DEVICE_HOST: 'DEV',
+  HOST_DEVICE_NAME: 'Arkane-PC',
   API_URL: 'DEV'
 }

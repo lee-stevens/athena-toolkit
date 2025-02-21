@@ -4,7 +4,8 @@
   "scripts": {
     "start:athena-core": "ng serve --project athena-core --port 4210",
     "build:athena-core": "ng build --project athena-core",
-    "build:athena-shared": "ng build --project athena-shared"
+    "build:athena-shared": "ng build --project athena-shared",
+		"test:athena-core": "ng test --project athena-core"
   },
   "private": true,
   "dependencies": {

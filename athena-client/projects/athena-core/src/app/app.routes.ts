@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { DevSpaceComponent } from './@features/dev-space/dev-space.component';
-import { DashboardComponent } from './@features/dashboard/dashboard.component';
+import { DashboardComponent } from '@Features/dashboard/dashboard.component';
+import { DevSpaceComponent } from '@Features/dev-space/dev-space.component';
 
 export const routes: Routes = [
   {
