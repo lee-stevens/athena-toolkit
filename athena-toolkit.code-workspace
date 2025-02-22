@@ -25,6 +25,8 @@
 			"titleBar.inactiveBackground": "#673ab799",
 			"titleBar.inactiveForeground": "#e7e7e799"
 		},
-		"angular.enable-strict-mode-prompt": false
+		"angular.enable-strict-mode-prompt": false,
+		"editor.tabSize": 2,
+		"editor.formatOnPaste": false,
 	}
 }
