@@ -4,7 +4,7 @@
   "scripts": {
     "start:athena-core": "ng serve --project athena-core --port 4210",
     "prettier-write": "prettier --write .",
-		"eslint-fix": "eslint --fix .",
+    "eslint-fix": "eslint --fix .",
     "build:athena-core": "ng build --project athena-core",
     "build:athena-shared": "ng build --project athena-shared",
     "test:athena-core": "ng test --project athena-core"
@@ -34,6 +34,7 @@
     "@angular/compiler-cli": "19.1.0",
     "@tailwindcss/postcss": "4.0.3",
     "@types/jasmine": "~5.1.0",
+    "eslint": "^9.21.0",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -42,6 +43,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "19.1.0",
     "postcss": "^8.5.3",
+    "prettier": "^3.5.1",
     "tailwindcss": "4.0.3",
     "typescript": "~5.7.2"
   }

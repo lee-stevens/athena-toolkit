@@ -4,15 +4,12 @@ import { IPrimeChart, IPrimeChartFactory } from '@Models/prime-chart-factory';
 @Injectable()
 export class PrimeChartStackedBarService implements IPrimeChartFactory {
   createExampleChart(): IPrimeChart {
-    let data: any;
-    let options: any;
-
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--p-text-color');
     const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color');
     const surfaceBorder = documentStyle.getPropertyValue('--p-content-border-color');
 
-    data = {
+    const data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
         {
@@ -36,7 +33,7 @@ export class PrimeChartStackedBarService implements IPrimeChartFactory {
       ],
     };
 
-    options = {
+    const options = {
       maintainAspectRatio: false,
       aspectRatio: 0.8,
       plugins: {

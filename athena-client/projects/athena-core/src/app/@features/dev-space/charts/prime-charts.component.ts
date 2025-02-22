@@ -4,11 +4,12 @@ import { PrimeChartBarService } from './services/prime-chart-bar.service';
 import { PrimeChartStackedBarService } from './services/prime-chart-stacked-bar.service';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { IPrimeChart } from '@Models/prime-chart-factory';
+import { PrimeChartRadarService } from './services/prime-chart-radar.service';
 
 @Component({
   selector: 'athena-core-prime-charts',
   imports: [ChartModule, CommonModule],
-  providers: [PrimeChartBarService, PrimeChartStackedBarService],
+  providers: [PrimeChartBarService, PrimeChartStackedBarService, PrimeChartRadarService],
   templateUrl: './prime-charts.component.html',
   styleUrl: './prime-charts.component.scss',
 })
@@ -16,13 +17,17 @@ export class PrimeChartsComponent {
   charts: IPrimeChart[] = [];
   platformId = inject(PLATFORM_ID);
 
-  constructor(
-    private _primeChartBarService: PrimeChartBarService,
-    private _primeChartStackedBarService: PrimeChartStackedBarService
-  ) {
+  private _primeChartService: PrimeChartBarService[] = [new PrimeChartBarService(), new PrimeChartStackedBarService(), new PrimeChartRadarService()];
+
+  constructor() {
+    this.generatePrimeCharts();
+  }
+
+  private generatePrimeCharts(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.charts.push(this._primeChartBarService.createExampleChart());
-      this.charts.push(this._primeChartStackedBarService.createExampleChart());
+      this._primeChartService.forEach((service) => {
+        this.charts.push(service.createExampleChart());
+      });
     }
   }
 }

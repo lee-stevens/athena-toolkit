@@ -4,15 +4,12 @@ import { IPrimeChartFactory, IPrimeChart } from '@Models/prime-chart-factory';
 @Injectable()
 export class PrimeChartBarService implements IPrimeChartFactory {
   createExampleChart(): IPrimeChart {
-    let data: any;
-    let options: any;
-
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--p-text-color');
     const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color');
     const surfaceBorder = documentStyle.getPropertyValue('--p-content-border-color');
 
-    data = {
+    const data = {
       labels: ['Q1', 'Q2', 'Q3', 'Q4'],
       datasets: [
         {
@@ -25,7 +22,7 @@ export class PrimeChartBarService implements IPrimeChartFactory {
       ],
     };
 
-    options = {
+    const options = {
       plugins: {
         legend: {
           labels: {

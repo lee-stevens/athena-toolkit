@@ -3,7 +3,9 @@ export interface IPrimeChartFactory {
 }
 
 export interface IPrimeChart {
-  type: any;
+  type: IPrimeChartType;
   data: any;
   options: any;
 }
+
+export type IPrimeChartType = 'bar' | 'radar' | 'line' | 'pie' | 'doughnut';
