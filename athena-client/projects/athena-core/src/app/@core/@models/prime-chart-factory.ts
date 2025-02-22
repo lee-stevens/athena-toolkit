@@ -1,9 +1,9 @@
 export interface IPrimeChartFactory {
-	createExampleChart(): IPrimeChart;
+  createExampleChart(): IPrimeChart;
 }
 
 export interface IPrimeChart {
-	type: any;
-	data: any;
-	options: any;
+  type: any;
+  data: any;
+  options: any;
 }

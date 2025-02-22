@@ -4,16 +4,14 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "athena-shared": [
-        "./dist/athena-shared"
-      ],
-			"@Env": [ "./projects/athena-core/environments/environment.ts" ],
-			"@Services/*": [ "./projects/athena-core/src/app/@core/@services/*" ],
-			"@Const/*": [ "./projects/athena-core/src/app/@core/@const/*" ],
-			"@Models/*": [ "./projects/athena-core/src/app/@core/@models/*" ],
-			"@Core/*": [ "./projects/athena-core/src/app/@core/*" ],
-			"@Api/*": [ "./projects/athena-core/src/app/@api/*" ],
-			"@Features/*": [ "./projects/athena-core/src/app/@features/*" ]
+      "athena-shared": ["./dist/athena-shared"],
+      "@Env": ["./projects/athena-core/environments/environment.ts"],
+      "@Services/*": ["./projects/athena-core/src/app/@core/@services/*"],
+      "@Const/*": ["./projects/athena-core/src/app/@core/@const/*"],
+      "@Models/*": ["./projects/athena-core/src/app/@core/@models/*"],
+      "@Core/*": ["./projects/athena-core/src/app/@core/*"],
+      "@Api/*": ["./projects/athena-core/src/app/@api/*"],
+      "@Features/*": ["./projects/athena-core/src/app/@features/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,

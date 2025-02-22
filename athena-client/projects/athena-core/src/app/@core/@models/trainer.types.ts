@@ -1,4 +1,4 @@
-import { IViewmodel } from "./generic-models";
+import { IViewmodel } from './generic-models';
 
 export type ExerciseCategory = 'Weightlifting' | 'Strength' | 'Flexibility' | 'Calisthenics' | 'Skill' | 'Cardio' | 'Other';
 
@@ -22,7 +22,7 @@ export interface IExercise {
   primaryMuscle?: string;
   secondaryMuscle?: string;
   weighted?: boolean;
-};
+}
 
 export interface IWorkout {
   id: number | null;
@@ -30,10 +30,9 @@ export interface IWorkout {
   description: string;
   category: ExerciseCategory | null;
   exercises: IExercise[];
-};
-
-export interface IDynamicWorkout extends IWorkout {
 }
+
+export interface IDynamicWorkout extends IWorkout {}
 
 export interface IRoutine {
   id: number;
@@ -41,8 +40,7 @@ export interface IRoutine {
   description: string;
   category: ExerciseCategory;
   workouts: IWorkout[];
-};
-
+}
 
 //Dynamic Workout
 export type DynamicWorkoutTableColumn = 'name' | 'variant' | 'setCurrent' | 'repCurrent' | 'setTarget' | 'repTarget' | 'addRemove';

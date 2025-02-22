@@ -4,21 +4,12 @@ import { PrimengComponent } from './primeng/primeng.component';
 import { MiscComponent } from './misc/misc.component';
 import { PrimeChartsComponent } from './charts/prime-charts.component';
 import { TabsModule } from 'primeng/tabs';
-import { DevDashboardComponent } from "./dev-dashboard/dev-dashboard.component";
+import { DevDashboardComponent } from './dev-dashboard/dev-dashboard.component';
 
 @Component({
   selector: 'athena-c-dev-space',
-  imports: [
-    TailwindComponent,
-    PrimengComponent,
-    MiscComponent,
-    PrimeChartsComponent,
-    TabsModule,
-    DevDashboardComponent
-],
+  imports: [TailwindComponent, PrimengComponent, MiscComponent, PrimeChartsComponent, TabsModule, DevDashboardComponent],
   templateUrl: './dev-space.component.html',
-  styleUrl: './dev-space.component.scss'
+  styleUrl: './dev-space.component.scss',
 })
-export class DevSpaceComponent {
-
-}
+export class DevSpaceComponent {}

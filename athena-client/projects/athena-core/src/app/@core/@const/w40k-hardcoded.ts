@@ -1,4 +1,4 @@
-import { IW40kDatacard as IW40kDatacard } from "@Models/tabletop.types";
+import { IW40kDatacard as IW40kDatacard } from '@Models/tabletop.types';
 
 export const W40K_DATACARDS: IW40kDatacard[] = [
   {
@@ -10,7 +10,7 @@ export const W40K_DATACARDS: IW40kDatacard[] = [
       save: 3,
       wounds: 5,
       leadership: 6,
-      oc: 1
+      oc: 1,
     },
     keywords: ['Character', 'Infantry', 'Primaris', 'Captain'],
     factionKeywords: ['AdeptusAstartes'],
@@ -23,8 +23,8 @@ export const W40K_DATACARDS: IW40kDatacard[] = [
           armorPenetration: 0,
           damage: 1,
           range: 24,
-          ballisticSkill: 2
-        }
+          ballisticSkill: 2,
+        },
       ],
       meleeWeapons: [
         {
@@ -33,24 +33,22 @@ export const W40K_DATACARDS: IW40kDatacard[] = [
           strength: 4,
           armorPenetration: 3,
           damage: 1,
-          weaponSkill: 2
-        }
+          weaponSkill: 2,
+        },
       ],
       wargearOptions: [
         {
           name: 'Iron Halo',
-          description: '4+ invulnerable save'
-        }
-      ]
+          description: '4+ invulnerable save',
+        },
+      ],
     },
     unitComposition: [
       {
         name: 'Primaris Captain',
-        count: 1
-      }
+        count: 1,
+      },
     ],
-    abilities: [
-
-    ]
-  }
-]
+    abilities: [],
+  },
+];

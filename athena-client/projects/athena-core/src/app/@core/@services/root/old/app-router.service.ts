@@ -1,20 +1,19 @@
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
-import { StorageService } from "../storage.service";
-import { APP_ROUTES } from "@Const/globals";
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { StorageService } from '../storage.service';
+import { APP_ROUTES } from '@Const/globals';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class AppRouterService {
   readonly appRoutes = APP_ROUTES;
 
   constructor(
     private _router: Router,
     private _appStorageService: StorageService
-  ) {
-  }
+  ) {}
 
   public navigateToDefaultRoute(): void {
-    const defaultAppRoute = this.appRoutes.find(route => route.default);
+    const defaultAppRoute = this.appRoutes.find((route) => route.default);
     if (defaultAppRoute) {
       this.navigateTo(defaultAppRoute.path);
     }
@@ -50,7 +49,7 @@ export class AppRouterService {
 
   private popCurrentUrlFromQueue(): string | undefined {
     let newUrl;
-    const urlQueue = this._appStorageService.getSessionStorageItem<[]>('URL_QUEUE')
+    const urlQueue = this._appStorageService.getSessionStorageItem<[]>('URL_QUEUE');
     if (urlQueue) {
       urlQueue.pop();
       newUrl = urlQueue[urlQueue.length - 1];

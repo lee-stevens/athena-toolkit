@@ -1,9 +1,8 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 /** Any Session or Local storage actions should be done through here for easy reference management */
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class StorageService {
-
   private serialize<T>(value: T): string {
     if (typeof value === 'object' && value !== null) {
       return JSON.stringify(value);

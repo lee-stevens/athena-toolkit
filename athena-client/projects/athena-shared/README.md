@@ -1,11 +1,17 @@
 <<<<<<< HEAD:README.md
 <<<<<<< HEAD
+
 # athena-toolkit
+
 =======
+
 # AthenaClient
+
 =======
+
 # AthenaShared
->>>>>>> be55cec (Added an Angular 19 Workspace and introduced athena-client (app) and athena-shared (library); Setup basic workspace files.):athena-client/projects/athena-shared/README.md
+
+> > > > > > > be55cec (Added an Angular 19 Workspace and introduced athena-client (app) and athena-shared (library); Setup basic workspace files.):athena-client/projects/athena-shared/README.md
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.0.
 
@@ -38,6 +44,7 @@ This command will compile your project, and the build artifacts will be placed i
 Once the project is built, you can publish your library by following these steps:
 
 1. Navigate to the `dist` directory:
+
    ```bash
    cd dist/athena-shared
    ```
@@ -68,4 +75,5 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> 143f684 (initial commit)
+
+> > > > > > > 143f684 (initial commit)

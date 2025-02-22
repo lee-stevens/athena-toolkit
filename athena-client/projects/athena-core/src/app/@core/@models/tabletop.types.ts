@@ -1,28 +1,12 @@
-export type TabletopGame =
-  'Warhammer 40k' |
-  'Warhammer Age of Sigmar'
+export type TabletopGame = 'Warhammer 40k' | 'Warhammer Age of Sigmar';
 
+export type W40kKeyword = 'Infantry' | 'Character' | 'Grenadres' | 'Imperium' | 'Tacticus' | 'Primaris' | 'Captain';
 
-export type W40kKeyword =
-  'Infantry' |
-  'Character' |
-  'Grenadres' |
-  'Imperium' |
-  'Tacticus' |
-  'Primaris' |
-  'Captain';
+export type W40kFactionKeyword = 'AdeptusAstartes';
 
-export type W40kFactionKeyword =
-   'AdeptusAstartes';
+export type W40kUnitName = 'Primaris Captain' | 'Primaris Lieutenant';
 
-
-export type W40kUnitName =
-  'Primaris Captain' |
-  'Primaris Lieutenant';
-
-export type W40kAbilities =
-  'Rites of Battles' |
-  'Finest Hour'
+export type W40kAbilities = 'Rites of Battles' | 'Finest Hour';
 
 export interface ITabletopDatacard {
   game: TabletopGame;
@@ -37,14 +21,14 @@ export interface IW40kDatacard extends ITabletopDatacard {
     wounds: number;
     leadership: number;
     oc: number;
-  },
+  };
   keywords: W40kKeyword[];
   factionKeywords: W40kFactionKeyword[];
   equipment: {
     rangedWeapons: IW40kRangedWeapon[];
     meleeWeapons: IW40kMeleeWeapon[];
     wargearOptions: IW40kWargear[];
-  },
+  };
   unitComposition: IW40kUnitComposition[];
   abilities: IW40kAbility[];
 }

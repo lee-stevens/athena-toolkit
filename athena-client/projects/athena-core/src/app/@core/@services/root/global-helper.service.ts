@@ -1,10 +1,9 @@
-import { APP_ROUTES } from "@Const/globals";
-import { IAppRoute } from "@Models/components.types";
-import { Injectable } from "@angular/core";
+import { APP_ROUTES } from '@Const/globals';
+import { IAppRoute } from '@Models/components.types';
+import { Injectable } from '@angular/core';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 export class GlobalHelperService {
-
   public getSortedAppRoutes(): IAppRoute[] {
     const appRoutes = APP_ROUTES;
     const sortedAppRoutes = appRoutes.sort((a, b) => {
@@ -12,7 +11,7 @@ export class GlobalHelperService {
         return a.placement.sortOrder - b.placement.sortOrder;
       }
       return a.placement.position === 'top' ? -1 : 1;
-    })
+    });
     return sortedAppRoutes;
   }
 }

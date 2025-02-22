@@ -10,13 +10,13 @@ Generated with Angular 19 using a projects workspace. `athena-core` & `athena-sh
 
 Each project that wants to use Tailwind must import tailwind css in styles.scss
 
-``` SCSS
+```SCSS
 @use "tailwindcss";
 ```
 
 ## PrimeNG
 
-``` TS
+```TS
 // AngularAnimations & PrimeNG required
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -36,7 +36,7 @@ export const appConfig: ApplicationConfig = {
 
 ### PrimeIcons
 
-``` SCSS
+```SCSS
 /* project/name/src/styles.scss */
 @use "primeicons/primeicons.css";
 ```

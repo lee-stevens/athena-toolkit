@@ -1,6 +1,6 @@
-import { Injectable, signal } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
-import { StorageService } from "../storage.service";
+import { Injectable, signal } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { StorageService } from '../storage.service';
 
 // TODO: Investiage if Signals are worth replacing Observables
 
@@ -9,9 +9,7 @@ export class AppDebugService {
   private _debugEnabled$$ = new BehaviorSubject<boolean>(this.getCachedDebugState());
   private _isDebugModeSignal = signal<boolean>(this.getCachedDebugState());
 
-  constructor(
-    private _appStorageService: StorageService
-  ) {}
+  constructor(private _appStorageService: StorageService) {}
 
   getCachedDebugState(): boolean {
     return this._appStorageService.getSessionStorageItem<boolean>('debugEnabled') ?? false;
@@ -35,4 +33,3 @@ export class AppDebugService {
     this._debugEnabled$$.next(newState);
   }
 }
-

@@ -5,15 +5,15 @@ import { DevSpaceComponent } from '@Features/dev-space/dev-space.component';
 export const routes: Routes = [
   {
     path: 'dev-space',
-    component: DevSpaceComponent
+    component: DevSpaceComponent,
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
     path: '**',
     redirectTo: '/dashboard',
-    pathMatch: 'full'
-  }
+    pathMatch: 'full',
+  },
 ];

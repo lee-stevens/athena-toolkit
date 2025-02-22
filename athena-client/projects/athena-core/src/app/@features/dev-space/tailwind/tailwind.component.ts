@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'athena-c-tailwind',
   imports: [],
   templateUrl: './tailwind.component.html',
-  styleUrl: './tailwind.component.scss'
+  styleUrl: './tailwind.component.scss',
 })
-export class TailwindComponent {
-
-}
+export class TailwindComponent {}

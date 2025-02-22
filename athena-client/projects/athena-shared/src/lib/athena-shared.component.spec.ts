@@ -8,9 +8,8 @@ describe('AthenaSharedComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AthenaSharedComponent]
-    })
-    .compileComponents();
+      imports: [AthenaSharedComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AthenaSharedComponent);
     component = fixture.componentInstance;

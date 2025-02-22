@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "start:athena-core": "ng serve --project athena-core --port 4210",
+    "prettier-write": "prettier --write .",
     "build:athena-core": "ng build --project athena-core",
     "build:athena-shared": "ng build --project athena-shared",
-		"test:athena-core": "ng test --project athena-core"
+    "test:athena-core": "ng test --project athena-core"
   },
   "private": true,
   "dependencies": {

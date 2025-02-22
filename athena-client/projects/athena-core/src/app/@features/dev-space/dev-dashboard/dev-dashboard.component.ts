@@ -5,18 +5,14 @@ import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'athena-c-dev-dashboard',
-  imports: [
-    TableModule
-  ],
+  imports: [TableModule],
   templateUrl: './dev-dashboard.component.html',
-  styleUrl: './dev-dashboard.component.scss'
+  styleUrl: './dev-dashboard.component.scss',
 })
 export class DevDashboardComponent {
   envVariables: EnvVariable[] = [];
 
-	constructor(
-		private _environmentService: EnvironmentService
-	) {
-		this.envVariables = this._environmentService.mapEnvironmentVariables();
-	}
+  constructor(private _environmentService: EnvironmentService) {
+    this.envVariables = this._environmentService.mapEnvironmentVariables();
+  }
 }

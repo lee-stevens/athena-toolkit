@@ -8,9 +8,8 @@ describe('TailwindComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TailwindComponent]
-    })
-    .compileComponents();
+      imports: [TailwindComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TailwindComponent);
     component = fixture.componentInstance;
