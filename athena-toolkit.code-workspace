@@ -5,6 +5,10 @@
     }
   ],
   "settings": {
+    "files.exclude": {
+      "**/.angular/": true,
+      "**/node_modules/": true
+    },
     "peacock.color": "#673ab7",
     "workbench.colorCustomizations": {
       "activityBar.activeBackground": "#8259cb",
