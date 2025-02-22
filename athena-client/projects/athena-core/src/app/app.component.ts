@@ -7,7 +7,7 @@ import { DockModule } from 'primeng/dock';
 import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
-  selector: 'athena-c-root',
+  selector: 'athena-core-root',
   imports: [RouterOutlet, DockModule, TooltipModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

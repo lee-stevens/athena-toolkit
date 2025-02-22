@@ -4,7 +4,7 @@ import { EnvironmentService } from '@Services/root/environment.service';
 import { TableModule } from 'primeng/table';
 
 @Component({
-  selector: 'athena-c-dev-dashboard',
+  selector: 'athena-core-dev-dashboard',
   imports: [TableModule],
   templateUrl: './dev-dashboard.component.html',
   styleUrl: './dev-dashboard.component.scss',

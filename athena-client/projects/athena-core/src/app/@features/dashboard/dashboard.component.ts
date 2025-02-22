@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'athena-c-dashboard',
+  selector: 'athena-core-dashboard',
   imports: [],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

@@ -7,7 +7,7 @@ import { TabsModule } from 'primeng/tabs';
 import { DevDashboardComponent } from './dev-dashboard/dev-dashboard.component';
 
 @Component({
-  selector: 'athena-c-dev-space',
+  selector: 'athena-core-dev-space',
   imports: [TailwindComponent, PrimengComponent, MiscComponent, PrimeChartsComponent, TabsModule, DevDashboardComponent],
   templateUrl: './dev-space.component.html',
   styleUrl: './dev-space.component.scss',

@@ -4,7 +4,7 @@ import { ChartModule } from 'primeng/chart';
 import { CheckboxModule } from 'primeng/checkbox';
 
 @Component({
-  selector: 'athena-c-misc',
+  selector: 'athena-core-misc',
   imports: [ButtonModule, ChartModule, CheckboxModule],
   templateUrl: './misc.component.html',
   styleUrl: './misc.component.scss',

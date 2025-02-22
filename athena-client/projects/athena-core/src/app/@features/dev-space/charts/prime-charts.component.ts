@@ -6,7 +6,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { IPrimeChart } from '@Models/prime-chart-factory';
 
 @Component({
-  selector: 'athena-c-prime-charts',
+  selector: 'athena-core-prime-charts',
   imports: [ChartModule, CommonModule],
   providers: [PrimeChartBarService, PrimeChartStackedBarService],
   templateUrl: './prime-charts.component.html',

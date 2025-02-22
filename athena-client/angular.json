@@ -12,7 +12,7 @@
       },
       "root": "projects/athena-core",
       "sourceRoot": "projects/athena-core/src",
-      "prefix": "athena-c",
+      "prefix": "athena-core",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -108,7 +108,7 @@
       "projectType": "library",
       "root": "projects/athena-shared",
       "sourceRoot": "projects/athena-shared/src",
-      "prefix": "athena-s",
+      "prefix": "athena-shared",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
