@@ -6,8 +6,18 @@
   ],
   "settings": {
     "files.exclude": {
+      "**/.vscode/": true,
       "**/.angular/": true,
-      "**/node_modules/": true
+      "**/node_modules/": true,
+      "**/.gitignore": true,
+      "**/*prettier*": true,
+      "**/*editorconfig*": true,
+      "**/*eslint*": true,
+      "**/*postcss*": true,
+      "**/*-lock*": true,
+      "**/ssl": true,
+      "**/*tsconfig.app.json*": true,
+      "**/*tsconfig.spec.json*": true
     },
     "peacock.color": "#673ab7",
     "workbench.colorCustomizations": {
