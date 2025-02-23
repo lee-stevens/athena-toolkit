@@ -1,15 +1,17 @@
 <main class="main">
   <div class="card">
     <div class="dock-window">
-      <p-dock [model]="items" [styleClass]="'min-w-40'" [position]="'bottom'">
-        <ng-template #item let-item>
-          <div (click)="onDockItemClicked(item)">
-            <i class="pi" [ngClass]="item.icon" style="font-size: 2rem" (click)="onDockItemClicked(item)"></i>
+      <p-dock [model]="dockRouteItems" [styleClass]="'min-w-40'" [position]="'bottom'">
+        <ng-template #item let-dockItem>
+          <div (click)="onDockItemClicked(dockItem)">
+            <i class="pi" [ngClass]="dockItem.icon" style="font-size: 2rem"></i>
           </div>
         </ng-template>
       </p-dock>
     </div>
   </div>
+
+  <athena-core-global-toolbar />
 
   <router-outlet />
 </main>
