@@ -28,9 +28,10 @@ export class StorageService {
     sessionStorage.setItem(key, serializedValue);
   }
 
-  getLocalStorageItem<T>(key: string): T {
+  getLocalStorageItem<T>(key: string, fallbackValue?: T): T {
     const item = localStorage.getItem(key);
-    return this.deserialize<T>(item);
+    const deserializedItem = this.deserialize<T>(item);
+    return deserializedItem ?? (fallbackValue as T);
   }
 
   setLocalStorageItem<T>(key: string, value: T): void {

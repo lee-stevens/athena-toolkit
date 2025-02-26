@@ -2,14 +2,7 @@
   <ng-template #start>
     <div class="flex items-center gap-2">
       @for (item of leftToolbarItems; track item) {
-        @if (item.iconClass) {
-          <i class="pi" [ngClass]="item.iconClass"></i>
-        }
-        @switch (item.type) {
-          @case ('button') {
-            <p-button label="{{ item.label }}" text plain />
-          }
-        }
+        <ng-template [ngTemplateOutlet]="toolbarItem" [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
       }
     </div>
   </ng-template>
@@ -17,14 +10,22 @@
   <ng-template #end>
     <div class="flex items-center gap-2">
       @for (item of rightToolbarItems; track item) {
-        @switch (item.type) {
-          @case ('button') {
-            <p-button label="{{ item.label }}" text plain />
-          }
-        }
+        <ng-template [ngTemplateOutlet]="toolbarItem" [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
       }
       <athena-core-theme-manager />
       <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" [style]="{ width: '32px', height: '32px' }" />
     </div>
   </ng-template>
 </p-toolbar>
+
+<ng-template #toolbarItem let-item>
+  @switch (item.renderConfig?.toolbar?.type) {
+    @case ('button') {
+      <p-button label="{{ item.label }}" text (click)="onClick(item)">
+        @if (item.iconClass) {
+          <i class="pi" [ngClass]="item.iconClass"></i>
+        }
+      </p-button>
+    }
+  }
+</ng-template>

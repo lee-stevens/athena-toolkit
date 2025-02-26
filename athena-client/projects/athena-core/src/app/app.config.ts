@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
       theme: {
         preset: Aura,
         options: {
-          darkModeSelector: '.athena-colour-scheme',
+          darkModeSelector: '.athena-dark-mode',
         },
       },
     }),

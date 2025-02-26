@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
+import { AthenaLoggerService } from '@Services/root/athena-logger.service';
+import { StorageService } from '@Services/root/storage.service';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
@@ -8,10 +10,24 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './theme-manager.component.scss',
 })
 export class ThemeManagerComponent {
-  toggleDarkMode() {
+  darkMode = signal<boolean>(false);
+
+  constructor(private _storageService: StorageService) {
+    this.darkMode.set(this._storageService.getLocalStorageItem<boolean>('athena-dark-mode', false));
+
+    effect(() => {
+      this.setAndSaveDarkMode();
+    });
+  }
+
+  private setAndSaveDarkMode(): void {
     const element = document.querySelector('html');
-    if (element) {
-      element.classList.toggle('athena-colour-scheme');
-    }
+    element?.classList?.toggle('athena-dark-mode', this.darkMode());
+    this._storageService.setLocalStorageItem('athena-dark-mode', this.darkMode());
+    AthenaLoggerService.log(`Theme Dark Mode set to ${this.darkMode()}`);
+  }
+
+  toggleDarkMode() {
+    this.darkMode.set(!this.darkMode());
   }
 }

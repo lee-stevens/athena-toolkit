@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterService } from '@Services/root/router.service';
 import { MenuItem } from 'primeng/api';
-import { DOCK_ROUTE_ITEMS } from '../../../app.routes';
 import { DockModule } from 'primeng/dock';
 import { CommonModule } from '@angular/common';
+import { ATHENA_ROUTE_ITEMS } from '@Models/routes';
 
 @Component({
   selector: 'athena-core-global-dock',
@@ -34,17 +33,9 @@ export class GlobalDockComponent {
     },
   ];
 
-  constructor(private _routerService: RouterService) {
-    this.dockRouteItems = DOCK_ROUTE_ITEMS;
+  constructor() {
+    this.dockRouteItems = ATHENA_ROUTE_ITEMS.filter((r) => r.renderConfig?.dock);
   }
 
-  onDockItemClicked(item: MenuItem) {
-    const path = item['path'];
-    if (path) {
-      console.log(`Dock Item clicked, navigating to ${path}`);
-      this._routerService.navigateTo(path);
-    } else {
-      console.error('No path defined for dock item:', item);
-    }
-  }
+  onItemClick(item: MenuItem) {}
 }

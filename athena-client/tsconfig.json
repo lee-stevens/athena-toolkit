@@ -10,7 +10,7 @@
       "@Const/*": ["./projects/athena-core/src/app/@core/@const/*"],
       "@Models/*": ["./projects/athena-core/src/app/@core/@models/*"],
       "@Core/*": ["./projects/athena-core/src/app/@core/*"],
-      "@Api/*": ["./projects/athena-core/src/app/@api/*"],
+      "@Api/*": ["./projects/athena-core/src/app/@core/@api/*"],
       "@Features/*": ["./projects/athena-core/src/app/@features/*"]
     },
     "outDir": "./dist/out-tsc",
