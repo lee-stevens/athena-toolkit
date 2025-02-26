@@ -21,10 +21,11 @@
 <ng-template #toolbarItem let-item>
   @switch (item.renderConfig?.toolbar?.type) {
     @case ('button') {
-      <p-button label="{{ item.label }}" text (click)="onClick(item)">
+      <p-button text (click)="onClick(item)">
         @if (item.iconClass) {
-          <i class="pi" [ngClass]="item.iconClass"></i>
+          <i class="pi text-violet-500" [ngClass]="item.iconClass"></i>
         }
+        <span class="text-violet-500">{{ item.label }}</span>
       </p-button>
     }
   }

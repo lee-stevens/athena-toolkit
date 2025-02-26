@@ -12,7 +12,7 @@ export class FeaturesService {
 
   getFeature(name: AthenaFeature): boolean {
     const isFeatureEnabled = !!this._enabledFeatures.find((f) => f === name);
-    AthenaLoggerService.log(`Feature ${name}: ${isFeatureEnabled ? 'Enabled' : 'Disabled'}`);
+    // AthenaLoggerService.log(`Feature ${name}: ${isFeatureEnabled ? 'Enabled' : 'Disabled'}`);
     return isFeatureEnabled;
   }
 }

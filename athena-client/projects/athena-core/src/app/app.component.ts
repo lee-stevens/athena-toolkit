@@ -3,12 +3,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DockModule } from 'primeng/dock';
 import { TooltipModule } from 'primeng/tooltip';
-import { GlobalToolbarComponent } from "./@core/@ui/global-toolbar/global-toolbar.component";
-import { GlobalDockComponent } from "./@core/@ui/global-dock/global-dock.component";
+import { GlobalToolbarComponent } from './@core/@ui/global-toolbar/global-toolbar.component';
 
 @Component({
   selector: 'athena-core-root',
-  imports: [RouterOutlet, DockModule, TooltipModule, CommonModule, GlobalToolbarComponent, GlobalDockComponent],
+  imports: [RouterOutlet, DockModule, TooltipModule, CommonModule, GlobalToolbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
