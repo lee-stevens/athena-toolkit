@@ -1,4 +1,4 @@
-import { ViewmodelState } from './trainer.types';
+import { ViewmodelState } from './old/trainer.types';
 
 export interface IViewmodel {
   state: ViewmodelState;

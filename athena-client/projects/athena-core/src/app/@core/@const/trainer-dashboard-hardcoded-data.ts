@@ -1,4 +1,4 @@
-import { IExercise, IWorkout, IRoutine } from '@Models/trainer.types';
+import { IExercise, IWorkout, IRoutine } from '@Models/old/trainer.types';
 
 export const HARDCODED_EXERCISES: IExercise[] = [
   { id: 1, name: 'Front-Lever', description: '', category: 'Calisthenics' },

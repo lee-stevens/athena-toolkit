@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { APIService } from './api.service';
-import { ILanguage, IWord, IWordLanguage, ITranslatedWord } from '@Models/languages.types';
+import { ILanguage, IWord, IWordLanguage, ITranslatedWord } from '@Models/old/languages.types';
 
 @Injectable({ providedIn: 'root' })
 export class LanguagesApiService {

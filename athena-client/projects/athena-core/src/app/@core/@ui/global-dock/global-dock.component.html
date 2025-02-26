@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="dock-window">
+    <p-dock [model]="dockRouteItems" [styleClass]="'min-w-40'" [position]="'bottom'">
+      <ng-template #item let-dockItem>
+        <div (click)="onDockItemClicked(dockItem)">
+          <i class="pi" [ngClass]="dockItem.icon" style="font-size: 2rem"></i>
+        </div>
+      </ng-template>
+    </p-dock>
+  </div>
+</div>

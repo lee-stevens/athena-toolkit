@@ -1,4 +1,4 @@
-import { IViewmodel } from './generic-models';
+import { IViewmodel } from '../generic-models';
 
 export type ExerciseCategory = 'Weightlifting' | 'Strength' | 'Flexibility' | 'Calisthenics' | 'Skill' | 'Cardio' | 'Other';
 

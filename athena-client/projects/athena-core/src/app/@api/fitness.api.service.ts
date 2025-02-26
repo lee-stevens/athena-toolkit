@@ -1,4 +1,4 @@
-import { IExercise, IExerciseDBModel, IRoutine, IWorkout } from '@Models/trainer.types';
+import { IExercise, IExerciseDBModel, IRoutine, IWorkout } from '@Models/old/trainer.types';
 import { Injectable } from '@angular/core';
 import { APIService } from './api.service';
 import { ApiControllerEndpointBase } from '@App/@core/@constants/api.endpoints';

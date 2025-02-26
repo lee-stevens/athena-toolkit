@@ -1,3 +1,7 @@
+export type TaskboardState = 'Backlog' | 'Todo' | 'InProgress' | 'Done';
+export type TaskboardPriority = 'Low' | 'Medium' | 'High';
+export type TaskboardInternalState = 'Draft' | 'Active';
+
 export interface ITaskboard {
   columns: ITaskboardColumn[];
 }
@@ -17,7 +21,3 @@ export interface ITaskboardItem {
   createdDate: string;
   internalState: TaskboardInternalState;
 }
-
-export type TaskboardState = 'Backlog' | 'Todo' | 'InProgress' | 'Done';
-export type TaskboardPriority = 'Low' | 'Medium' | 'High';
-export type TaskboardInternalState = 'Draft' | 'Active';

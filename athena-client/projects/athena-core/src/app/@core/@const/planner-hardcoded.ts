@@ -1,4 +1,4 @@
-import { IPlannerDay, IPlannerTask } from '@Models/planner.types';
+import { IPlannerDay, IPlannerTask } from '@Models/old/planner.types';
 
 export const PLANNER_DAY_1_TASKS: IPlannerTask[] = [
   {

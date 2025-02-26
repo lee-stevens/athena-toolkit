@@ -1,4 +1,4 @@
-import { IW40kDatacard as IW40kDatacard } from '@Models/tabletop.types';
+import { IW40kDatacard as IW40kDatacard } from '@Models/old/tabletop.types';
 
 export const W40K_DATACARDS: IW40kDatacard[] = [
   {

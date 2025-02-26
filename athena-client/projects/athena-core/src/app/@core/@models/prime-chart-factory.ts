@@ -1,3 +1,5 @@
+export type IPrimeChartType = 'bar' | 'radar' | 'line' | 'pie' | 'doughnut';
+
 export interface IPrimeChartFactory {
   createExampleChart(): IPrimeChart;
 }
@@ -7,5 +9,3 @@ export interface IPrimeChart {
   data: any;
   options: any;
 }
-
-export type IPrimeChartType = 'bar' | 'radar' | 'line' | 'pie' | 'doughnut';
